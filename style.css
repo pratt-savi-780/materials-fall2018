@@ -118,3 +118,14 @@ nav li {
     float: left;
     padding-right: 25px;
 }
+
+.left {
+    max-width: 33%;
+    float: left;
+    margin-right: 25px;
+}
+
+.right {
+    max-width: 33%;
+    float: left;
+}

@@ -1,0 +1,98 @@
+<html>
+    <head>
+        <title>In-class Exercises | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+            <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: CSS</h1>
+            </header>
+
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="http://htmldog.com/reference/cssproperties/">This HTML Dog page</a> lists the more common CSS properties you'll be using.</li>
+                    <li>This <a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">CSS cheat sheet</a> is a bit more terse but you might find it useful.</li>
+                    <li>There are more exhaustive references on <a href="https://css-tricks.com/almanac/">CSS-Tricks</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network</a>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Part 1: Use developer tools to change other webpages' CSS</h2>
+                <ol>
+                    <li>Load a webpage in your browser.</li>
+                    <li>Open developer tools:</li>
+                    <li>
+                        <div>Using the Select Element tool, select an element:</div>
+                        <img src="img/devtools-select-element.png" />
+                    </li>
+                    <li>
+                        <p>On the left you should see the HTML for the element, and on the right you should see the CSS for it. The CSS might be more complicated depending on the page you're looking at.</p>
+                        <img src="img/devtools-panels.png" />
+                    </li>
+                    <li>
+                        <p>Style the element by clicking to the right of <code>element.style</code> in the CSS area. Start typing a property, use the arrow keys to select it, then press tab and type a value. This has an identical effect to adding CSS to a <code>style</code> attribute in an element.</p>
+                        <img src="img/devtools-style.gif" />
+                    </li>
+                    <li>Use the Select Element tool to find another element you would like to style. This time, instead of styling by adding properties to <code>element.style</code> add and change properties within one of the existing CSS statements that work on the element. When you do, multiple elements on the page should change.</li>
+                    <li>Continue defacing the page and get a feeling for how the CSS on the page works. In particular, look at turning properties off (using the checkboxes to the left of them) and changing colors using the built-in color picker.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Add CSS to your Glitch site</h2>
+                <ol>
+                    <li>Log in to <a href="https://glitch.com">Glitch</a>.</li>
+                    <li>Open your project from last class.</li>
+                    <li>Open your <code>style.css</code> file (on the left of the page).</li>
+                    <li>Edit the CSS. Change the background color (of the <code>body</code>), font size.</li>
+                    <li>Add a class to one of your elements and style that class.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Add CSS to another webpage</h2>
+                <ol>
+                    <li>Open <a href="https://glitch.com/edit/#!/carto-overlay?path=index.html">this Glitch project</a> and "remix" it in your account by clicking on the project name, then <strong>Remix This</strong>.</li>
+                    <li>Let's add some style. In the <code>styles.css</code> file, add a line after <pre><code>/* Your styles go here */</code></pre>
+                        and paste the following:
+                        <pre><code>p {
+  margin-top: 100px;
+}</code></pre>
+                        There should now be much more room between paragraphs. We selected the paragraph elements (<code>p</code>) and set the <code>margin-top</code> property to <code>100px</code>.
+
+                    </li>
+                    <li>Style all the links (<code>a</code> elements) by adding a CSS statement after the statement we just added and setting properties as you like. I recommend <code><a href="https://css-tricks.com/almanac/properties/c/color/">color</a></code>, <code><a href="https://css-tricks.com/almanac/properties/b/background-color/">background-color</a></code>, and <code><a href="https://css-tricks.com/almanac/properties/t/text-decoration/">text-decoration</a></code> for starters.</li>
+                    <li>Change the font family for the entire page by modifying the <code>font-family</code> for the <code>body</code>. For now lets set it to the generic <code>sans-serif</code>. Read more about this and see an example at <a href="https://css-tricks.com/almanac/properties/f/font-family/">CSS-Tricks</a>.</li>
+                    <li>
+                        CSS can do much more than select all elements of a type and style those. For example, notice that there are a few <code>span</code> elements in the HTML we're working with. They have been invisible so far because <code>span</code> elements have no style by default. Let's style some of them now by adding a new statement:
+                        <pre><code>.sign-label {
+  color: red;
+}</code></pre>
+                        <p>
+                        Why did we use <code>.sign-label</code> for the selector instead of <code>span</code>? Because you generally don't want to style all <code>span</code> elements on a page, and in this case we only wanted to style the ones that are of class <code>sign-label</code>.
+                        </p>
+                    </li>
+                    <li>
+                        <p>There are two links (<code>a</code> elements) on this page. Let's style the one that links to Carto differently.</p>
+                        <p>Find the link to Carto:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..."&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>and add a <code>style</code> attribute to it:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..." <strong>style=""</strong>&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>then add some CSS to the style:</p>
+                        <pre><code>&lt;a href="https://eric.carto.com..." style="<strong>font-weight: bold;</strong>"&gt;Carto&lt;/a&gt;</code></pre>
+                        <p>You can add as many CSS properties as you like to a <code>style</code> attribute on an element, just remember to separate them with semicolons (<code>;</code>). Add another CSS property to the link's <code>style</code> attribute now.</p>
+                    </li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
