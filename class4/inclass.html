@@ -53,15 +53,18 @@
 
             <section>
                 <h2>Part 3: Load some more data</h2>
-                <p>TODO look at some data from the open data portal and load geojson?</p>
-                <p>with the SODA API? https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data</p>
                 <ol>
                     <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
-                    <li>Go to <a href="https://gist.github.com/">gist.github.com</a> and find the map data you created last week in class. If you can't find the data or didn't create any, make some simple data now with <a href="http://geojson.io/">geojson.io</a>.</li>
-                    <li>Download the data from Gist by clicking the <strong>Raw</strong> button and saving the resulting page.</li>
-                    <li>Upload the data to your Glitch <strong>assets</strong> folder (as you would with an image).</li>
-                    <li>Copy the URL for the uploaded data and paste it in <strong>line 12</strong> of the JavaScript, replacing the URL that is currently there.</li>
-                    <li>View the resulting page and confirm that your data is loaded on the map.</li>
+                    <li>Go to <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj">New York's Open Data portal page for school districts</a>.</li>
+                    <li>Click <strong>Export</strong>.</li>
+                    <li>Click <strong>SODA API</strong>.</li>
+                    <li>Copy the text under <strong>API Endpoint</strong>. It should look something like
+                        <pre><code>https://data.cityofnewyork.us/resource/cuae-wd7h.json</code></pre>                     
+                    </li>
+					<li>In the JavaScript file, on line 12 (the line where <code>fetch</code> is being called), replace the URL with the one you copied.</li>
+					<li>Replace <code>json</code> with <code>geojson</code> in the URL that you copied.</li>
+					<li>Click <strong>Show Live</strong> in Glitch to see the result&mdash;you should see the school districts on the map.</li>
+					<li>Copy and paste lines 12 through 21 and try adding <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">311 requests</a>.</li>
                 </ol>
             </section>
 
