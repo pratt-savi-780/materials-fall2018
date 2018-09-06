@@ -120,12 +120,12 @@ nav li {
 }
 
 .left {
-    max-width: 33%;
+    width: 25%;
     float: left;
     margin-right: 25px;
 }
 
 .right {
-    max-width: 33%;
+    width: 25%;
     float: left;
 }
