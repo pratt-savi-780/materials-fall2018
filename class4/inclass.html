@@ -25,7 +25,7 @@
   dragging: false
 };</code></pre>
                     </li>
-                    <li>We'll set more options, but first add give these to Leaflet when it creates the map. Change the line
+                    <li>We'll set more options, but first give these to Leaflet when it creates the map. Change the line
                         <pre><code>var map = L.map('map').setView([38.500893,-98.745117], 5);</code></pre>
                         to
                         <pre><code>var map = L.map('map'<strong>, mapOptions</strong>).setView([38.500893,-98.745117], 5);</code></pre>
