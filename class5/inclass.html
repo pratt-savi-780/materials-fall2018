@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: More JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Popups</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-popups">this Glitch site</a> in your account.</li>
+                    <li>Uncomment <strong>line 25</strong> and click on some features while looking at the console in developer tools. You should see the <code>properties</code> object for each feature as you do.</li>
+                    <li>Select an additional property to add to the popup and add it to the text we are returning for the popup. For example, the original text could be:
+                        <pre><code>return layer.feature.properties['complaint_type'];</code></pre>
+                        and we could add a space between that and another property by replacing the above with:
+                        <pre><code>return layer.feature.properties['complaint_type']<strong> + ' ' + layer.feature.properties['descriptor'];</strong></code></pre>
+                    </li>
+                    <li>You can also add HTML to a popup by putting the HTML in the text itself. Continuing the above, we could make the <code>complaint_type</code> bold by replacing:
+                        <pre><code>return layer.feature.properties['complaint_type']<strong> + ' ' + layer.feature.properties['descriptor'];</strong></code></pre>
+                        with:
+                        <pre><code>return <strong>'&lt;strong&gt;'</strong> + layer.feature.properties['complaint_type'] + <strong>'&lt;/strong&gt;</strong> ' + layer.feature.properties['descriptor'];</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Styling popups and other Leaflet elements</h2>
+                <ol>
+                    <li>Continue with the Glitch site you started working on in the previous exercise.</li>
+                    <li>Surround some of the feature properties that you're putting in the popup in <code>&lt;div&gt;</code> tags. For example, if you had
+                        <pre><code>return layer.feature.properties['complaint_type'];</code></pre>
+                        you would wrap it in <code>&lt;div&gt;</code> tags like this:
+                        <pre><code>return <strong>'&lt;div&gt;'</strong> + layer.feature.properties['complaint_type'] + <strong>'&lt;/div&gt;'</strong>;</code></pre>
+                    </li>
+                    <li>Add class attributes to the <code>div</code>s for styling in CSS. If you have
+                        <pre><code>return '&lt;div <strong>class="popup-complaint-type"</strong>&gt;' + layer.feature.properties['complaint_type'] + '&lt;/div&gt;';</code></pre>
+                    </li>
+                    <li>Style the classes you created in your popup in your CSS file.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Styling features</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/quick-collision?path=script.js:21:36">this Glitch site</a> in your account.</li>
+                    <li>Open the <a href="https://leafletjs.com/reference-1.3.4.html">Leaflet documentation</a>. For this exercise you'll be most interested in <a href="https://leafletjs.com/reference-1.3.4.html#geojson">GeoJSON</a> and <a href="https://leafletjs.com/reference-1.3.4.html#path-option">Path options</a></li>
+                    <li>Style the polygons (council districts) by adding an options parameter to <code>L.geoJson</code> and creating a <code>style</code> function. Use <a href="https://glitch.com/edit/#!/leaflet-styled-polygons">this Glitch site</a> for assistance as needed.</li>
+                    <li>Style the points (311 complaints) by adding an options parameter to <code>L.geoJson</code> and creating <code>pointToLayer</code> and <code>style</code> functions as is done in <a href="https://glitch.com/edit/#!/leaflet-styled-points">this Glitch site</a>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Conditionally tyling features</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-conditional-styles">this Glitch site</a> in your account.</li>
+                    <li>The points are currently styled differently where <code>status</code> is <code>Closed</code>. Instead style the points where <code>complaint_type</code> is <code>HEATING</code>.</li>
+                    <li>Try styling another value of <code>complaint_type</code> differently.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

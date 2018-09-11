@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 5 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 5</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 5</p>
+        </div>
+
+        <div class="slide">
+            <h1>More JavaScript</h1>
+        </div>
+
+        <div class="slide">
+            <h2>defining functions</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet() {
+  console.log('Hello');
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet(name) {
+  console.log('Hello, ' + name);
+}</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/navigating-objects.png);">
+            <h2>navigating objects</h2>
+            <a href="https://glitch.com/edit/#!/objects-playground" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>JSON</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+        </div>
+
+        <div class="slide">
+            <h2>popups</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popups.png);">
+            <h2>popups</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-popups" class="source">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>leaflet makes its own HTML elements</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dom.png);">
+            <a href="https://leaflet-simple.glitch.me/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>advanced popups</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet(name) {
+  console.log('Hello, ' + name);
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>function getGreeting(name) {
+  return 'Hello, ' + name;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2><code>return</code></h2>
+        </div>
+
+        <div class="slide">
+          <h2><code>return</code> gives a value back to whatever called the function</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>function (layer) {
+  return layer.feature.properties['complaint_type'];
+}</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-zoom.png);">
+            <h2>whatever you <code>return</code> here is put in the popup</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-popups" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-img.png);">
+            <h2>...even if it's HTML</h2>
+            <a href="https://glitch.com/edit/#!/uttermost-shake" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-img-better.png);">
+            <h2>...even if it's HTML</h2>
+            <a href="https://glitch.com/edit/#!/uttermost-shake" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>styling popups</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the HTML you create in popups can include classes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>you can style these classes exactly as you would with plain old HTML and CSS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class-css.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-class-style.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>styling maps on a page</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-sidebar.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-sidebar" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>styling map features</h2>
+        </div>
+
+        <div class="slide">
+		  <pre><code>var options = {
+  maxZoom: 18
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{
+  setView: function () { ... },
+  getCenter: function () { ... }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{
+  setView: function () { ... },
+  getCenter: function () { ... }
+}</code></pre>
+			<h2>functions can be values in objects</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var layerOptions = {
+  style: function (geoJsonFeature) {
+    return {
+      fillColor: '#7f2a9e'
+    };
+  },
+};</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-geojson-style-docs.png);">
+            <a href="https://leafletjs.com/reference-1.3.4.html#geojson" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-styled-polygons.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-styled-polygons" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-styled-polygons-code.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-styled-polygons" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-styled-points.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-styled-points" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-styled-points-code.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-styled-points" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-conditional-styles.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-conditional-styles" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-conditional-styles.png);">
+			<h2>you can style based on properties</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-conditional-styles" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>if (status === 'Closed') {
+  // return red style
+}
+else {
+  // return green style
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs-link.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs.png);">
+            <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs-borough.png);">
+            <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-queries.png);">
+            <a href="https://dev.socrata.com/docs/queries/" class="source">source</a>
+        </div>
+
+    </body>
+</html>
