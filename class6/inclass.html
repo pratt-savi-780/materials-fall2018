@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: More JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Functions</h2>
+                <ol>
+                    <li>Start a blank <a href="https://glitch.com">Glitch site</a> in your account.</li>
+                    <li>In <code>script.js</code>, write a function that takes a number as the parameter and returns the number two times the parameter. For example, if your function is called with <code>4</code> the function should return <code>8</code>.</li>
+                    <li>Confirm that your function works by viewing the resulting site (<strong>Show Live</strong>) and calling the function through the console in developer tools.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Styling features</h2>
+                <p>This is a continuation of Part 3 from <a href="../class5/inclass.html">last class</a>.</p>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/quick-collision?path=script.js:21:36">this Glitch site</a> in your account.</li>
+                    <li>Open the <a href="https://leafletjs.com/reference-1.3.4.html">Leaflet documentation</a>. For this exercise you'll be most interested in <a href="https://leafletjs.com/reference-1.3.4.html#geojson">GeoJSON</a> and <a href="https://leafletjs.com/reference-1.3.4.html#path-option">Path options</a></li>
+                    <li>Style the polygons (council districts) by adding an options parameter to <code>L.geoJson</code> and creating a <code>style</code> function. Use <a href="https://glitch.com/edit/#!/leaflet-styled-polygons">this Glitch site</a> for assistance as needed.</li>
+                    <li>Style the points (311 complaints) by adding an options parameter to <code>L.geoJson</code> and creating <code>pointToLayer</code> and <code>style</code> functions as is done in <a href="https://glitch.com/edit/#!/leaflet-styled-points">this Glitch site</a>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Conditionally styling features</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-conditional-styles">this Glitch site</a> in your account.</li>
+                    <li>The points are currently styled differently where <code>status</code> is <code>Closed</code>. Instead style the points where <code>complaint_type</code> is <code>HEATING</code>.</li>
+                    <li>Try styling another value of <code>complaint_type</code> differently.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: A zoom out button</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/vine-emery">this Glitch site</a> in your account.</li>
+                    <li>The <strong>zoom in</strong> button should work on the resulting page.</li>
+                    <li>Implement JavaScript for the <strong>zoom out</strong> button&mdash;it should be very similar to the code for the <strong>zoom in</strong> button.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: Add data with a button</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/simple-foxglove">this Glitch project</a> into your Glitch account.</li>
+                    <li>Use <strong>Show Live</strong> and open developer tools on the page.</li>
+                    <li>Call <code>loadData</code> to load the data on the map.</li>
+                    <li>Back in the JavaScript, add an event listener that calls <code>loadData</code> when the <strong>load data</strong> button is clicked.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Listening for Leaflet events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-map-events">this Glitch project</a> into your Glitch account.</li>
+                    <li>In the JavaScript, listen for more map events and log out the name of the event. For example, copy
+                        <pre><code>map.on('moveend', function () {
+  console.log('moveend');
+});</code></pre>
+                        paste those lines (so the <code>moveend</code> listener still exists) and change <code>moveend</code> in the new listener, like this:
+                        <pre><code>map.on('click', function () {
+  console.log('click');
+});</code></pre>
+                        Don't forget to change what is logged out, too, so you can see which event happened.
+                    </li>
+                    <li>Do the above process until you have five different <a href="https://leafletjs.com/reference-1.3.4.html#map-event">map events</a>. Pay special attention to:
+                        <ul>
+                            <li><code>click</code></li>
+                            <li><code>dblclick</code></li>
+                            <li><code>mousedown</code></li>
+                            <li><code>mouseup</code></li>
+                            <li><code>move</code></li>
+                        </ul>
+                        How do the above events differ from each other?
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 7: Filtering data</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/ivory-daffodil">this Glitch site</a> in your account or continue working from the site from the previous example.</li>
+                    <li>Open the JavaScript file.</li>
+                    <li>Change the filtered <code>borough</code> to <code>QUEENS</code> and confirm that the map data is updated.</li>
+                    <li>Keeping that <code>borough</code> filter, add a filter for <code>complaint_type</code>.</li>
+                    <li>Add another filter to the URL.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 8: Filtering data on an event</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/woozy-bobcat">this Glitch project</a> into your Glitch account.</li>
+                    <li>Confirm that the <strong>Brooklyn</strong> button works.</li>
+                    <li>Implement the <strong>Queens</strong> button.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
