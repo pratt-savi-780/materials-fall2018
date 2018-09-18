@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: Data, More JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Filtering data in the NYC Open Data API</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/ivory-daffodil">this Glitch site</a> in your account or continue working from the site from the previous example.</li>
+                    <li>Open the JavaScript file.</li>
+                    <li>Change the <code>borough</code> filter to <code>QUEENS</code> and confirm that the map data is updated.</li>
+                    <li>Keeping that <code>borough</code> filter, add a filter for <code>complaint_type</code>.</li>
+                    <li>Remove the <code>borough</code> and <code>complaint_type</code> filters from your URL (you can comment the code out if you want to hold on to it).</li>
+                    <li>Refer to the <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv">API documentation for the dataset</a> and for <a href="https://dev.socrata.com/docs/queries/">queries more generally</a>.</li>
+                    <li>Use <a href="https://dev.socrata.com/docs/functions/in.html"><code>in</code></a> in a <code>$where</code> filter to find complains in two or three boroughs at once.</li>
+                    <li>Use <a href="https://dev.socrata.com/docs/functions/">another function</a> to do more filtering.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Filtering data on an event</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/woozy-bobcat">this Glitch project</a> into your Glitch account.</li>
+                    <li>Confirm that the <strong>Brooklyn</strong> button works.</li>
+                    <li>Implement the <strong>Queens</strong> button&mdash;make it so that when the <strong>Queens</strong> button is clicked, data is loaded for Queens.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Dropdown events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/auspicious-squid">this Glitch project</a> into your Glitch account.</li>
+                    <li>Confirm that the dropdown works for Brooklyn.</li>
+                    <li>Change the HTML for the dropdown (<code>&lt;select&gt;</code>) to add the other boroughs.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Text input events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-text-input">this Glitch project</a> into your Glitch account.</li>
+                    <li>Confirm that the text input works.</li>
+                    <li>The text input currently searches within <code>complaint_type</code>. Change <code>loadData</code> to search on some other field and/or some other dataset.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: <code>forEach</code></h2>
+                <ol>
+                    <li>Create a new <a href="https://glitch.com">Glitch</a> project that is a webpage.</li>
+                    <li>In the JavaScript file, create an array of numbers. For example:
+                        <pre><code>var allTheNumbers = [1, 2, 3, 4.1, 10000000];</code></pre>
+                    </li>
+                    <li>Use <code>forEach</code> to log out each value in the array. For example:
+                        <pre><code>allTheNumbers.forEach(function (number) {
+  // Do something with <strong>number</strong> here
+});</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Checkbox events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-checkboxes">this Glitch project</a> into your Glitch account.</li>
+                    <li>Add checkboxes for the other boroughs. You should only have to change the HTML to make this work.</li>
+                    <li>If you have time, change the HTML and <code>loadData</code> to filter by some of the values in <code>complaint_type</code>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

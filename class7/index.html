@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 7 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 7</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 7</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs-link.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs.png);">
+            <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs-borough.png);">
+            <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?borough=BROOKLYN</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{endpoint}?{key}={value}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{endpoint}?{key}={value}</code></pre>
+            <h2>where <code>endpoint</code> is the URL we were using to get GeoJSON</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>{endpoint}?{key}={value}</code></pre>
+            <h2><code>endpoint</code>, <code>key</code>, and <code>value</code> will change, but the URL structure is standard</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure.png);">
+        </div>
+
+        <div class="slide">
+            <pre><code>{endpoint}?{parameter 1}&amp;{parameter 2}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  borough=BROOKLYN&amp;agency=DEP</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-queries.png);">
+            <a href="https://dev.socrata.com/docs/queries/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-queries.png);">
+            <h2>similar to SQL</h2>
+            <a href="https://dev.socrata.com/docs/queries/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>in()</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/soql-in.png);">
+            <a href="https://dev.socrata.com/docs/functions/in.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=borough in('BROOKLYN', 'QUEENS')</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>like</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/soql-like.png);">
+            <a href="https://dev.socrata.com/docs/functions/like.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=complaint_type like '%litter%'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%litter%'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%litter%'</code></pre>
+            <h2>(make <code>complaint_type</code> lower-case)</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%25litter%25'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%25litter%25'</code></pre>
+            <h2>(<code>%</code> is special in URLs, <em>escape</em> the value)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure-percent.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure-percent.png);">
+            <h2><code>q=%25</code></h2>
+        </div>
+
+        <div class="slide">
+            <h2>this comes up pretty often in code</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-test.png);">
+            <a href="https://glitch.com/edit/#!/brief-bank?path=index.html:28:0" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-test.png);">
+            <h2>what if we want literally <em>&lt;test&gt;</em> to show up on the page?</h2>
+            <a href="https://glitch.com/edit/#!/brief-bank?path=index.html:28:0" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>if you want to be on the safe side use <code>encodeURI</code></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/encode-uri.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>how do how other sites load their data?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-0.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-2.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-3.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/taxi-day-in-life.png);">
+            <a href="https://chriswhong.github.io/nyctaxi/" class="source">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a href="https://livinglotsnyc.org/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>more event handlers</h2>
+        </div>
+
+        <div class="slide">
+            <h2>dropdowns</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dropdown-html.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown-code.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>text inputs</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input-html.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input-code.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>checkboxes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-html.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+            <h2>works fine when we have one or two buttons</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what if we have many checkboxes?</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>document.querySelectorAll()</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>document.querySelectorAll('.filter-checkbox')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>document.querySelectorAll('.filter-checkbox')</code></pre>
+            <h2>select all of the elements with class <code>filter-checkbox</code></h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>only works with <em>one element</em></h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>so if we want to add event listeners to many elements, we need to look at each individually</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>forEach</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>looks at each element in an array</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>calls a function once on each element</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>var numbers = [1, 74, 200];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});
+
+&gt; 2
+&gt; 148
+&gt; 400</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre><code>var myArray = [];</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre><code>var myArray = [];
+
+myArray.forEach(
+);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre><code>var myArray = [];
+
+myArray.forEach(function (element) {
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre><code>var myArray = [];
+
+myArray.forEach(function (element) {
+  // Do something with <strong>element</strong>
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>I prefer <em>plural</em> names for arrays, <em>singular</em> names for elements</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-0.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-1.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-2.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 6</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>filtering without an API</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-no-api.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes-2" class="source">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>next time: making GeoJSONs when you don't have them</h2>
+        </div>
+
+        <div class="slide">
+            <h2>consider installing:</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png);">
+            <h2>QGIS</h2>
+            <a href="https://qgis.org" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine.png);">
+            <h2>OpenRefine</h2>
+            <a href="http://openrefine.org/" class="source">source</a>
+        </div>
+
+    </body>
+</html>
