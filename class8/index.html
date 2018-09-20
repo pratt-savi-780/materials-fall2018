@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 8 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 8</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 8</p>
+        </div>
+
+        <div class="slide">
+            <h2>data sources and tools</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mining-the-web.png);">
+            <a href="https://commons.pratt.edu/savi/course-guides/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gis.png);">
+            <a href="https://commons.pratt.edu/savi/course-guides/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>where do you get data?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-dataset.png);">
+            <a href="https://toolbox.google.com/datasetsearch" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-dataset-search.png);">
+            <a href="https://toolbox.google.com/datasetsearch/search?query=lakes%20type%3Ashp&docid=UYz3ZF3G8PGk%2FV7NAAAAAA%3D%3D" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm.png);">
+            <a href="https://openstreetmap.org" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geofabrik-extracts.png);">
+            <a href="http://download.geofabrik.de/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>filetypes</h2>
+        </div>
+
+        <div class="slide">
+            <h2>vector filetypes</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+            <h2>best for webmaps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+            <h2>the only filetype Leaflet can open on its own</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles</h2>
+            <h2>best for desktop GISs</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles</h2>
+            <h2>the most common spatial data format</h2>
+        </div>
+
+        <div class="slide">
+            <h2>shapefiles have some annoying properties</h2>
+        </div>
+
+        <div class="slide">
+            <h2>but we put up with them because everyone else uses them</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. column names limited to ten characters</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-column-names.png);">
+            <h2>how do you pronounce "C_DIG2DESC"?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>2. multiple files make up a shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-files.png);">
+        </div>
+
+        <div class="slide">
+            <h2>so if you are sharing or uploading a shapefile, make sure it is zipped</h2>
+        </div>
+
+        <div class="slide">
+            <h2>3. one geometry type per shapefile</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shapefile-one-geometry-per-file.png);">
+        </div>
+
+        <div class="slide">
+            <h2>CSV</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CSVs are common and handy for point data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>these are simply text files</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv.png);">
+            <h2><em>c</em>omma <em>s</em>eparated <em>v</em>alues</h2>
+        </div>
+
+        <div class="slide">
+            <h2>KML</h2>
+        </div>
+
+        <div class="slide">
+            <h2>KML / KMZ</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/kml.png);">
+            <a href="https://github.com/googlemaps/kml-samples/blob/gh-pages/kml/Placemark/placemark.kml" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>KML</h2>
+            <h2>less popular now, but used to be popular for webmaps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>KML</h2>
+            <h2>you'll still run into KML sometimes</h2>
+        </div>
+
+        <div class="slide">
+            <h2>converting to GeoJSON</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2geojson.png);">
+            <a href="http://2geojson.com/index.php" class="source">2geojson</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/2geojson.png);">
+            <h2>there are a variety of places online where you can convert to geojson</h2>
+            <a href="http://2geojson.com/index.php" class="source">2geojson</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapshaper.png);">
+            <a href="https://mapshaper.org/" class="source">mapshaper</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png);">
+            <a href="https://qgis.org/en/site/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis.png);">
+            <h2>I would generally recommend a GIS such as QGIS</h2>
+            <a href="https://qgis.org/en/site/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-export.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-export-dialog.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-omnivore.png);">
+            <a href="https://github.com/mapbox/leaflet-omnivore" class="source">leaflet-omnivore</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-omnivore.png);">
+            <h2>you might also try using a plugin to open other data in Leaflet</h2>
+            <a href="https://github.com/mapbox/leaflet-omnivore" class="source">leaflet-omnivore</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-0.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-2.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-3.png);">
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/habitat-map-3.png);">
+            <h2>JSON, but not GeoJSON</h2>
+            <a href="http://habitatmap.org/markers" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine.png);">
+            <a href="http://openrefine.org/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine.png);">
+            <h2>OpenRefine is one way of dealing with this</h2>
+            <a href="http://openrefine.org/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine-json-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine-json-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/openrefine-json-2.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what do you do when you have too much data?</h2>
+        </div>
+
+        <div class="slide">
+            <ul style="list-style: disc;">
+                <li>filter features</li>
+                <li>reduce columns</li>
+                <li>simplify geometries</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>filtering in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-filter.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-filter-expression.png);">
+        </div>
+
+        <div class="slide">
+            <h2>reducing columns in QGIS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-delete-columns-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-delete-columns-2.png);">
+        </div>
+
+        <div class="slide">
+            <h2>simplifying geometries</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapshaper-simplify.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-simplify.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-simplify.png);">
+            <h2>QGIS can do this too, but you have to do a little more work</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-reproject.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>if all else fails, you might need an online service</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>Mapbox</h2>
+            <a href="https://www.mapbox.com/" class="source">Mapbox</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto.png);">
+            <h2>Carto</h2>
+            <a href="https://carto.com/" class="source">Carto</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arcgis-online.png);">
+            <h2>ArcGIS Online</h2>
+            <a href="https://www.arcgis.com/home/index.html" class="source">ArcGIS Online</a>
+        </div>
+
+        <div class="slide">
+            <h2>these all are places where you can upload data and access it with an API</h2>
+        </div>
+
+        <div class="slide">
+            <h2>like the Open Data portal API, but with data you upload</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geodjango.png);">
+            <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/gis/" class="source">GeoDjango</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geodjango.png);">
+            <h2>you can also install your own system for doing this</h2>
+            <a href="https://docs.djangoproject.com/en/2.1/ref/contrib/gis/" class="source">GeoDjango</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/census_results.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_results.png);">
+            <h2>"I have this spreadsheet I want to map..."</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_tracts.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_tracts.png);">
+            <h2>you need a file with relatable geographies</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_ids.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/census_ids.png);">
+            <h2>and a column in each file that relates the two</h2>
+        </div>
+
+        <div class="slide">
+            <h2>if you have all of these things, you can do an attribute join</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/grafting.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/grafting.jpg);">
+            <h2>joins relate two datasets to each other</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/graft-potato-tomato.jpg);">
+            <a class="source" href="http://motherboard.vice.com/read/why-does-the-tomato-potato-plant-exist">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/graft-potato-tomato.jpg);">
+            <h2>joins create new hybrid datasets</h2>
+            <a class="source" href="http://motherboard.vice.com/read/why-does-the-tomato-potato-plant-exist">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ketchup-n-fries.jpg);">
+            <a class="source" href="https://diybackyardfarm.com/2015/06/03/have-you-seen-this-cool-plant/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-join.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>methodology</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_taxi.png);">
+            <a class="source" href="http://nyctaxi.herokuapp.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_taxi_about.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc_taxi_asterisks.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/preferential-rents.png);">
+            <a href="https://projects.propublica.org/graphics/preferential-rents" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/preferential-rents-1.png);">
+            <a href="https://projects.propublica.org/graphics/preferential-rents" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>keep track of your work!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>how did you get the data?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>how did you change the data, beyond simple filetype conversions?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what are some caveats about the data?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>plan on including these somewhere in your project</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+    </body>
+</html>

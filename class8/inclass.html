@@ -1,0 +1,83 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: Data</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Convert shapefiles and KMZs to GeoJSON</h2>
+                <ol>
+                    <li>Download <a href="data/class8data.zip">this week's data</a> and unzip it.</li>
+                    <li>Using QGIS or an online converter like <a href="https://mapshaper.org/">mapshaper</a>, convert
+                        <ul>
+                            <li>Hurricane_Evacuation_Routes.kmz</li>
+                            <li>lisseddata</li>
+                        </ul>
+                        to GeoJSONs.
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Download and convert JSON data</h2>
+                <ol>
+                    <li>Install <a href="">OpenRefine</a> on your computer and open it.</li>
+                    <li>Go to <a href="http://habitatmap.org/markers">HabitatMap</a>.</li>
+                    <li>Open developer tools and go to the network tab.</li>
+                    <li>Under <strong>Featured Maps</strong> in the bottom left of the site, click on <strong>Creek Speak: Voices from Newtown Creek</strong></li>
+                    <li>When you do, you should see requests made under the network tab. Find <strong>markers.json</strong>, click on it, and go to the <strong>Response</strong> tab. Select and copy all of the JSON response.</li>
+                    <li>Paste the response into OpenRefine, under <strong>Clipboard</strong>, select the first full JSON element&mdash;the first entry you expect to be one row, and click <strong>Create Project</strong>.</li>
+                    <li>Rename the latitude and longitude columns to the full names of "latitude" and "longitude".</li>
+                    <li>Download as CSV.</li>
+                    <li>Open the CSV in QGIS using <strong>Layer &gt; Data Source Manager</strong>.</li>
+                    <li>Export the layer as a GeoJSON.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Filtering in QGIS</h2>
+                <ol>
+                    <li>Open <strong>Bicycle Routes</strong> in QGIS.</li>
+                    <li>Filter the file to only features where <strong>facilitycl</strong> is <strong>Sharrows</strong>.</li>
+                    <li>Export as a GeoJSON.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Joining data</h2>
+                <p>(maybe join data I download?)</p>
+                <ol>
+                    <li>Open <strong>ACS_16_5YR_B25003/ACS_16_5YR_B25003_edit.xlsx</strong> and <strong>nys_census_tracts</strong> in QGIS.</li>
+                    <li>Open the layer properties for <strong>nys_census_tracts</strong>.</li>
+                    <li>Go to the <strong>Joins</strong> tab.</li>
+                    <li>Add a new join using the <strong>+</strong> button.</li>
+                    <li>Select the spreadsheet for the <strong>Join layer</strong>.</li>
+                    <li>Select <strong>GEO.id</strong> for the <strong>Join field</strong>.</li>
+                    <li>Select <strong>GEO_ID</strong> for the <strong>Target field</strong>.</li>
+                    <li>Press <strong>OK</strong> and confirm that the join was completed.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: Look for data related to your project</h2>
+                <ol>
+                    <li>Explore data related to your project using <a href="https://www.data.gov/">data.gov</a>, <a href="https://opendata.cityofnewyork.us/">NYC Open Data</a>, and <a href="https://toolbox.google.com/datasetsearch">Google Dataset search</a>.</li>
+                    <li>What kind of work might need to happen for the data to be used in Leaflet?</li>
+                    <li>Is this work you can do with QGIS?</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
