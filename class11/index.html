@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 11 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 11</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 11</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-plugins.png);">
+            <h2>plugins</h2>
+            <a href="http://leafletjs.com/plugins.html" target="_blank" class="source">Leaflet plugins</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-plugins.png);">
+            <h2>they're like libraries but much smaller</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder.png);">
+            <a href="https://github.com/perliedman/leaflet-control-geocoder" target="_blank" class="source">leaflet-control-geocoder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-demo.png);">
+            <a href="http://www.liedman.net/leaflet-control-geocoder/" target="_blank" class="source">leaflet-control-geocoder</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-minimap.png);">
+            <a href="https://github.com/Norkart/Leaflet-MiniMap" target="_blank" class="source">Leaflet.MiniMap</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-minimap-demo.png);">
+            <a href="http://norkart.github.io/Leaflet-MiniMap/example.html" target="_blank" class="source">Leaflet.MiniMap</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-markercluster.png);">
+            <a href="https://github.com/Leaflet/Leaflet.markercluster" target="_blank" class="source">leaflet-markercluster</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-markercluster-demo.gif);">
+            <a href="http://leaflet.github.io/Leaflet.markercluster/example/marker-clustering-realworld.388.html" target="_blank" class="source">leaflet-markercluster</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-realtime.png);">
+            <a href="https://github.com/perliedman/leaflet-realtime" target="_blank" class="source">leaflet-realtime</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-realtime-demo.gif);">
+            <a href="http://www.liedman.net/leaflet-realtime/busses.html" target="_blank" class="source">leaflet-realtime</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-draw.png);">
+            <a href="https://github.com/Leaflet/Leaflet.draw" target="_blank" class="source">Leaflet.draw</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-draw-demo.png);">
+            <a href="http://leaflet.github.io/Leaflet.draw/" target="_blank" class="source">Leaflet.draw</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-mappaint.png);">
+            <a href="https://github.com/SINTEF-9012/Leaflet.MapPaint" target="_blank" class="source">Leaflet.MapPaint</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-mappaint-demo.png);">
+            <a href="http://sintef-9012.github.io/Leaflet.MapPaint/" target="_blank" class="source">Leaflet.MapPaint</a>
+        </div>
+
+        <div class="slide">
+            <h2>using plugins</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you use them like larger libraries (such as Leaflet):</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1. look for an example or demo</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-1.png);">
+            <a href="https://github.com/perliedman/leaflet-control-geocoder" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-2.png);">
+            <a href="http://www.liedman.net/leaflet-control-geocoder/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-2.png);">
+            <h2>does it do what you expect?</h2>
+            <a href="http://www.liedman.net/leaflet-control-geocoder/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>2. look for documentation in the plugin's repo</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-0.png);">
+            <a href="https://github.com/perliedman/leaflet-control-geocoder#usage" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>3. load the code for the plugin in your HTML</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-3.png);">
+            <a href="https://github.com/perliedman/leaflet-control-geocoder#usage" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-3.png);">
+            <h2>sometimes you're lucky and they give you links for this</h2>
+            <a href="https://github.com/perliedman/leaflet-control-geocoder#usage" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-3.png);">
+            <h2>the CSS should go after you load Leaflet's and before you load yours</h2>
+            <a href="https://github.com/perliedman/leaflet-control-geocoder#usage" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-control-geocoder-3.png);">
+            <h2>the JavaScript should also go after you load Leaflet's and before you load yours</h2>
+            <a href="https://github.com/perliedman/leaflet-control-geocoder#usage" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdn-js.png);">
+            <a href="https://cdnjs.com/" target="_blank" class="source">cdnjs</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cdn-js.png);">
+            <h2>if there are no URLs listed, I'd suggest searching on cdnjs.com</h2>
+            <a href="https://cdnjs.com/" target="_blank" class="source">cdnjs</a>
+        </div>
+
+        <div class="slide">
+            <h2>4. use the plugin in your JavaScript</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">in-class exercise, parts 1 &amp; 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>templates</h2>
+        </div>
+
+        <div class="slide">
+            <h2>templates create HTML for you</h2>
+        </div>
+
+        <div class="slide">
+            <h2>templates use variables from your code</h2>
+        </div>
+
+        <div class="slide">
+            <h2>template + data = html</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mustache.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mustache.png);">
+            <h2><a href="http://mustache.github.io/" target="_blank">Mustache</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mustache.png);">
+            <h2><a href="http://mustache.github.io/" target="_blank">Mustache</a> is one library for making templates</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mustache-docs.png);">
+            <h2><a href="http://mustache.github.io/mustache.5.html" target="_blank" class="source">Mustache docs</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/inside-airbnb.png);">
+            <a href="http://insideairbnb.com/new-york-city/" target="_blank" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/inside-airbnb.png);">
+            <div style="background-color: rgba(255, 255, 255, 0.8); padding: 10px;">
+                for each listing:
+                <ul style="list-style: disc;">
+                    <li>id</li>
+                    <li>room_type</li>
+                    <li>neighborhood</li>
+                    <li>name</li>
+                    <li>city</li>
+                    <li>state</li>
+                    <li>(and more)</li>
+                </ul>
+            </div>
+            <a href="http://insideairbnb.com/new-york-city/" target="_blank" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/airbnb-qgis.png);">
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px;"><code>&lt;div&gt;
+    &lt;div&gt;{{id}}:&lt;/div&gt;
+    &lt;div&gt;{{name}} ({{room_type}})&lt;/div&gt;
+    &lt;div&gt;{{neighborhood}}, {{city}}, {{state}}&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px;"><code>&lt;div&gt;
+    &lt;div&gt;{{id}}:&lt;/div&gt;
+    &lt;div&gt;{{name}} ({{room_type}})&lt;/div&gt;
+    &lt;div&gt;{{neighborhood}}, {{city}}, {{state}}&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+            <h2>anything in {{}} gets replaced by Mustache</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px;"><code>&lt;div&gt;
+    &lt;div&gt;{{id}}:&lt;/div&gt;
+    &lt;div&gt;{{name}} ({{room_type}})&lt;/div&gt;
+    &lt;div&gt;{{neighborhood}}, {{city}}, {{state}}&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+            <pre style="font-size: 35px;"><code>var context = {
+    name: "Private Room for two w/ Easy commute to City",
+    id: 20286700,
+    room_type: 'Private room',
+    neighborhood: 'Elmhurst',
+    city: 'Elmhurst',
+    state: 'NY',
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 35px;"><code>&lt;div&gt;
+    &lt;div&gt;20286700:&lt;/div&gt;
+    &lt;div&gt;Private Room for two w/ Easy commute to City (Private room)&lt;/div&gt;
+    &lt;div&gt;Elmhurst, Elmhurst, NY&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>we'll call the data you pass to the template its <em>context</em></h2>
+        </div>
+
+        <div class="slide">
+            <h2>passing the <em>context</em> to Mustache tells it how to fill your template</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">in-class exercise part 4</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class.png);">
+            <h2>we can avoid this with popups</h2>
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-popup-class.png);">
+            <h2><code>Mustache.render()</code> returns HTML</h2>
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-mustache-popups.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-mustache-popups" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html">in-class exercise part 5</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-mustache-sidebar.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-mustache-sidebar" class="source">source</a>
+        </div>
+
+    </body>
+</html>
